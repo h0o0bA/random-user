@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 
 export default class FetchData extends React.Component {
   state = {
@@ -20,12 +21,28 @@ export default class FetchData extends React.Component {
       return <div>didn't get a person</div>;
     } else {
       return (
-        <div>
-          <img src={this.state.person.picture.large} />
-          <div>
-            name: {this.state.person.name.first} {this.state.person.name.last}
+        <div id="user-card" className="content-center">
+          <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 flex justify-center items-center">
+            <div className="">
+              <img
+                alt="user"
+                className="w-20 h-20 object-cover rounded-full mr-5"
+                src={this.state.person.picture.large}
+              />
+            </div>
+            <div>
+              <h2 className="text-gray-800 text-3xl font-semibold">
+                {this.state.person.name.title} {this.state.person.name.first}{" "}
+                {this.state.person.name.last}
+              </h2>
+              <p className="text-gray-800  ">{this.state.person.email}</p>
+              <p className="text-gray-800  ">
+                {moment(`${this.state.person.dob.date}`).format(
+                  "MMMM Do, YYYY"
+                )}
+              </p>
+            </div>
           </div>
-          <div>email: {this.state.person.email}</div>
         </div>
       );
     }

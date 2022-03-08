@@ -1,0 +1,17 @@
+body {
+  background: #022737;
+  text-align: center;
+  color: #fff;
+}
+
+.App {
+  padding: 10%;
+}
+
+#user-card {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
