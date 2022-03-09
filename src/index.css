@@ -15,3 +15,7 @@ body {
   justify-content: center;
   text-align: left;
 }
+
+.img-por-container {
+  min-width: 80px;
+}

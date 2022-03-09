@@ -22,11 +22,11 @@ export default class FetchData extends React.Component {
     } else {
       return (
         <div id="user-card" className="content-center">
-          <div className="max-w-md py-4 px-2 bg-white shadow-lg rounded-lg my-20 flex justify-center items-center">
-            <div className="">
+          <div className="max-w-md py-4 px-4 bg-white shadow-lg rounded-lg my-20 flex justify-center items-center">
+            <div className="mr-5 img-por-container">
               <img
                 alt="user"
-                className="w-20 h-20 object-cover rounded-full mr-5"
+                className="w-20 h-20 object-cover rounded-full h-auto"
                 src={this.state.person.picture.large}
               />
             </div>
